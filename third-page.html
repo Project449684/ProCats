@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Состав команды</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: left;
+            margin-top: 50px;
+            color: #333;
+            background-image: url('Рисунок1.jpg');
+            background-repeat: no-repeat;
+            background-size: auto 500%;
+            background-position: top center;
+        }
+        .container 
+        {
+            display: flex;
+            gap: 20px; /* Интервал между блоками */
+            justify-content: space-between; /* Распределение блоков по ширине */
+        }
+
+        .text-block {
+            width: calc((100% / 3) - 40px); /* Ширина блока с учётом интервала */
+            padding: 10px;
+            text-decoration: solid;
+            border: 0px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-wrap: wrap;
+            }
+            .text-block {
+                width: 100%;
+            }
+        }
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 28px;
+        }
+        a {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #2196F3;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 30px;
+            font-size: 18px;
+        }
+        a:hover {
+            background-color: #2196F3;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Состав команды</h1>
+    <p>Состав и роли в нашей команде</p>
+
+    <div class="text-block">тимлидер Зарипов Егор</div>
+    <div class="text-block">разработчик Коротченко Данил</div>
+    <div class="text-block">разработчик Позняк Игорь</div>
+    <div class="text-block">дизайнер Шакиров Рамиль</div>
+    <a href="html.html">Вернуться на главную</a>
+</body>
+</html>

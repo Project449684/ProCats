@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Договорная форма</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <h2>Заполнение формы договора</h2>
+    
+    <!-- Форма ввода -->
+    <form id="contractForm">
+        <label for="startDate">Дата начала:</label>
+        <input type="date" id="startDate" required>
+        
+        <label for="endDate">Дата окончания:</label>
+        <input type="date" id="endDate" required>
+        
+        <label for="numberInput">Введите номер документа:</label>
+        <input type="number" id="numberInput" min="0" required>
+        
+        <label for="groupSelect">Группа сотрудников:</label>
+        <select id="groupSelect" onchange="updateEmployeeList()" required>
+            <option value="">Выберите группу...</option>
+            <option value="professors">Профессора</option>
+            <option value="specialists">Специалисты</option>
+            <option value="docents">Доценты</option>
+        </select>
+        
+        <label for="employeeName">ФИО сотрудника:</label>
+        <select id="employeeName" disabled required>
+            <option value="">Выберите сотрудника...</option>
+        </select>
+        
+        <label for="imageFile">Загрузите изображение:</label>
+        <input type="file" id="imageFile" accept="image/*" required>
+        
+        <button type="submit">Выполнить</button>
+    </form>
+    
+    <!-- Блок для вывода результата -->
+    <canvas id="resultCanvas"></canvas>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
