@@ -160,19 +160,19 @@ if (!selectedEmployee) {
 
         let sliceStart = startDate.slice(2);
                     let partsStart = sliceStart.toString().split('-');
-                    ctx.fillText(partsStart[2], 450, 636); // Координаты числа
-                    ctx.fillText(partsStart[1], 530, 636); // Координаты месяца
-                    ctx.fillText(partsStart[0], 620, 636); // Координаты года
+                    ctx.fillText(partsStart[2], 450, 635); // Координаты числа
+                    ctx.fillText(partsStart[1], 530, 635); // Координаты месяца
+                    ctx.fillText(partsStart[0], 620, 635); // Координаты года
 
         let sliceEnd = endDate.slice(2);
                     let partsEnd = sliceEnd.toString().split('-');
-                    ctx.fillText(partsEnd[2], 705, 636); // Координаты числа
-                    ctx.fillText(partsEnd[1], 797, 636); // Координаты месяца
-                    ctx.fillText(partsEnd[0], 885, 636); // Координаты года
+                    ctx.fillText(partsEnd[2], 708, 635); // Координаты числа
+                    ctx.fillText(partsEnd[1], 797, 635); // Координаты месяца
+                    ctx.fillText(partsEnd[0], 885, 635); // Координаты года
 
         // Пишем имя сотрудника по центру
-        ctx.fillText(employeeName, resultCanvas.width - 700, resultCanvas.height - 1190);
-        // Пишем имя сотрудника снизу
+        ctx.fillText(employeeName, resultCanvas.width - 600, resultCanvas.height - 1190);
+        // Пишем имя сотрудника по снизу
         ctx.fillText(employeeName, 170, resultCanvas.height - 295);
 // Пишем номер документа
 ctx.textAlign = 'center'; // Устанавливаем выравнивание центр
@@ -183,20 +183,13 @@ ctx.textAlign = 'right'; // Правое выравнивание
 ctx.fillText('Клочков Юрий Сергеевич', resultCanvas.width - 110, resultCanvas.height - 200); // Ректор
 
 // Вывод должности
-ctx.textAlign = 'center'; // 
-ctx.fillText(`${selectedEmployee.job}`, 660, resultCanvas.height - 1190); 
+ctx.textAlign = 'left'; // Левое выравнивание
+ctx.fillText(`${selectedEmployee.job}`, 460, 365); // Количество отпускных дней
 
 // Вывод ставки и количества отпускных дней внизу слева
 ctx.textAlign = 'left'; // Левое выравнивание
 ctx.fillText(`${selectedEmployee.rate}`, 573, 447); // Ставка
 ctx.fillText(`${selectedEmployee.vacationDays}`, 940, resultCanvas.height - 675); // Количество отпускных дней
-
-// Вывод часов рабочих
-ctx.textAlign = 'left'; // Левое выравнивание
-ctx.fillText('36', 380, 660); // Часов в неделе
-ctx.fillText('6', 740, 660); // Часовой день
-ctx.fillText('900', 275, 705); // Максимум часов
-
 
 // Вывод постоянных данных в правом нижнем углу
 ctx.textAlign = 'right'; // Правое выравнивание
@@ -207,7 +200,7 @@ ctx.textAlign = 'right'; // Правое выравнивание
 ctx.fillText('Кафедра математики и прикладных информационных технологий', resultCanvas.width - 280, resultCanvas.height - 1137); // Кафедра
 
 ctx.textAlign = 'center'; // Правое выравнивание
-ctx.fillText('Мельникайте, 70,', resultCanvas.width / 2, 549); // Адрес
+ctx.fillText('Мельникайте, 70, к.519', resultCanvas.width / 2, 549); // Адрес
 }; // Закрывающая скобка блока img.onload
 
 // Чтение файла изображения через FileReader

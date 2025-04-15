@@ -3,7 +3,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: auto;
+    height: 100vh;
     margin: 0;
 }
 
@@ -30,7 +30,7 @@ input[type="date"], select, input[type="file"] {
 }
 
 button {
-    background-color: #007bff;
+    background-color: #4CAF50;
     color: white;
     padding: 14px 20px;
     margin-top: 20px;
@@ -41,7 +41,7 @@ button {
 }
 
 button:hover {
-    background-color: #1485ff;
+    background-color: #45a049;
 }
 
 canvas {
