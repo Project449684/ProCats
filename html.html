@@ -4,47 +4,149 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Договорная форма</title>
-    <link rel="stylesheet" href="styles.css">
+    <!-- Подключение шрифтов из Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'Montserrat', sans-serif; /* Шрифт Montserrat для всего текста */
+            color: #333;
+            background: url('background.jpg') no-repeat center center fixed; /* Использование изображения в качестве фона */
+            background-size: cover; /* Масштабирование фона */
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .oval-button {
+            padding: 15px 30px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            border-radius: 30px;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+            font-family: 'Montserrat', sans-serif; /* Шрифт Montserrat для кнопки */
+            font-weight: 600; /* Более жирный вес шрифта */
+            text-transform: lowercase; /* Первая буква строчной */
+            margin-bottom: 20px;
+        }
+
+        .oval-button:hover {
+            background-color: #0056b3;
+        }
+
+        h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 600px;
+            background-color: rgba(255, 255, 255, 0.8); /* Полупрозрачный фон */
+            padding: 40px; /* Увеличенный отступ для центрирования */
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            font-size: 18px;
+            margin-bottom: 5px;
+            font-weight: 500;
+            text-align: left;
+            width: 100%;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        button[type="submit"] {
+            padding: 10px 20px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        canvas {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <button class="oval-button" onclick="location.href='main.html'">вернуться на главную</button>
+        <h2>Заполнение формы договора</h2>
 
-<div class="container">
-    <button onclick="location.href='main.html'">Вернуться на главную страницу</button>
-    <h2>Заполнение формы договора</h2>
-    
-    <!-- Форма ввода -->
-    <form id="contractForm">
-        <label for="startDate">Дата начала:</label>
-        <input type="date" id="startDate" required>
-        
-        <label for="endDate">Дата окончания:</label>
-        <input type="date" id="endDate" required>
-        
-        <label for="numberInput">Введите номер документа:</label>
-        <input type="number" id="numberInput" min="0" required>
-        
-        <label for="groupSelect">Группа сотрудников:</label>
-        <select id="groupSelect" onchange="updateEmployeeList()" required>
-            <option value="">Выберите группу...</option>
-            <option value="professors">Профессора</option>
-            <option value="specialists">Специалисты</option>
-            <option value="docents">Доценты</option>
-        </select>
-        
-        <label for="employeeName">ФИО сотрудника:</label>
-        <select id="employeeName" disabled required>
-            <option value="">Выберите сотрудника...</option>
-        </select>
-        
-        <label for="imageFile">Загрузите изображение:</label>
-        <input type="file" id="imageFile" accept="image/*" required>
-        
-        <button type="submit">Выполнить</button>
-    </form>
-    
-    <!-- Блок для вывода результата -->
-    <canvas id="resultCanvas"></canvas>
-</div>
-<script src="script.js"></script>
+        <!-- Форма ввода -->
+        <form id="contractForm">
+            <label for="startDate">Дата начала:</label>
+            <input type="date" id="startDate" required>
+
+            <label for="endDate">Дата окончания:</label>
+            <input type="date" id="endDate" required>
+
+            <label for="numberInput">Введите номер документа:</label>
+            <input type="number" id="numberInput" min="0" required>
+
+            <label for="groupSelect">Группа сотрудников:</label>
+            <select id="groupSelect" onchange="updateEmployeeList()" required>
+                <option value="">Выберите группу...</option>
+                <option value="professors">Профессора</option>
+                <option value="specialists">Специалисты</option>
+                <option value="docents">Доценты</option>
+            </select>
+
+            <label for="employeeName">ФИО сотрудника:</label>
+            <select id="employeeName" disabled required>
+                <option value="">Выберите сотрудника...</option>
+            </select>
+
+            <label for="imageFile">Загрузите изображение:</label>
+            <input type="file" id="imageFile" accept="image/*" required>
+
+            <button type="submit">Выполнить</button>
+        </form>
+
+        <!-- Блок для вывода результата -->
+        <canvas id="resultCanvas"></canvas>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
+

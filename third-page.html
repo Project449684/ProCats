@@ -1,74 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Состав команды</title>
+    <!-- Подключение шрифтов из Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: left;
-            margin-top: 50px;
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'Montserrat', sans-serif; /* Шрифт Montserrat для всего текста */
             color: #333;
-            background-image: url('Рисунок1.jpg');
-            background-repeat: no-repeat;
-            background-size: auto 500%;
-            background-position: top center;
+            background: url('Рисунок1.jpg') no-repeat center center fixed; /* Использование изображения в качестве фона */
+            background-size: cover; /* Масштабирование фона */
         }
-        .container 
-        {
+
+        .container {
             display: flex;
-            gap: 20px; /* Интервал между блоками */
-            justify-content: space-between; /* Распределение блоков по ширине */
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            padding: 20px;
         }
 
-        .text-block {
-            width: calc((100% / 3) - 40px); /* Ширина блока с учётом интервала */
-            padding: 10px;
-            text-decoration: solid;
-            border: 0px solid #ccc;
-            box-sizing: border-box;
+        .oval-button {
+            padding: 15px 30px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            border-radius: 30px;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+            font-family: 'Montserrat', sans-serif; /* Шрифт Montserrat для кнопки */
+            font-weight: 600; /* Более жирный вес шрифта */
+            text-transform: lowercase; /* Первая буква строчной */
+            margin-top: 20px; /* Отступ сверху */
         }
 
-        @media (max-width: 768px) {
-            .container {
-                flex-wrap: wrap;
-            }
-            .text-block {
-                width: 100%;
-            }
+        .oval-button:hover {
+            background-color: #0056b3;
         }
+
         h1 {
             font-size: 36px;
             margin-bottom: 20px;
+            font-weight: 500;
         }
+
         p {
-            font-size: 28px;
+            font-size: 20px;
+            margin: 10px 0;
+            color: #666;
         }
-        a {
-            display: inline-block;
-            padding: 10px 15px;
-            background-color: #2196F3;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 30px;
-            font-size: 18px;
+
+        .content-container {
+            width: 100%;
+            max-width: 800px;
+            margin-top: 20px;
+            margin-bottom: 40px; /* Отступ снизу */
         }
-        a:hover {
-            background-color: #2196F3;
+
+        .team-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            width: 100%;
+            max-width: 800px;
+            margin-top: 20px;
+        }
+
+        .team-member {
+            width: calc(50% - 20px);
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Полупрозрачный фон */
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        @media (max-width: 768px) {
+            .team-member {
+                width: 100%;
+            }
         }
     </style>
 </head>
 <body>
+    <div class="container">
+        <div class="content-container">
+            <h1>Состав команды</h1>
+            <p>Состав и роли в нашей команде</p>
 
-    <h1>Состав команды</h1>
-    <p>Состав и роли в нашей команде</p>
+            <div class="team-container">
+                <div class="team-member">
+                    <p><strong>Тимлидер:</strong> Зарипов Егор</p>
+                </div>
+                <div class="team-member">
+                    <p><strong>Разработчик:</strong> Коротченко Данил</p>
+                </div>
+                <div class="team-member">
+                    <p><strong>Разработчик:</strong> Позняк Игорь</p>
+                </div>
+                <div class="team-member">
+                    <p><strong>Дизайнер:</strong> Шакиров Рамиль</p>
+                </div>
+            </div>
+        </div>
 
-    <div class="text-block">тимлидер Зарипов Егор</div>
-    <div class="text-block">разработчик Коротченко Данил</div>
-    <div class="text-block">разработчик Позняк Игорь</div>
-    <div class="text-block">дизайнер Шакиров Рамиль</div>
-    <a href="html.html">Вернуться на главную</a>
+        <button class="oval-button" onclick="location.href='main.html'">вернуться на главную</button>
+    </div>
 </body>
 </html>
+
+
+
+
+
