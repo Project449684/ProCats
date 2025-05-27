@@ -1,32 +1,41 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная страница</title>
     <!-- Подключение шрифтов из Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;500;600&display=swap"
+        rel="stylesheet">
     <style>
-        body, html {
+        body,
+        html {
             margin: 0;
             padding: 0;
             width: 100%;
             height: 100%;
             font-family: Arial, sans-serif;
             color: #333;
-            background: url('background.jpg') no-repeat center center fixed; /* Использование изображения в качестве фона */
-            background-size: cover; /* Масштабирование фона */
+            background: url('background.jpg') no-repeat center center fixed;
+            /* Использование изображения в качестве фона */
+            background-size: cover;
+            /* Масштабирование фона */
         }
 
         .container {
             display: flex;
             flex-direction: column;
-            align-items: flex-start; /* Выравнивание по левому краю */
+            align-items: flex-start;
+            /* Выравнивание по левому краю */
             justify-content: center;
             height: 100vh;
             text-align: left;
-            padding-left: 50px; /* Отступ слева */
-            padding-top: 0px; /* Уменьшенный отступ сверху, чтобы поднять текст */
+            padding-left: 50px;
+            /* Отступ слева */
+            padding-top: 0px;
+            /* Уменьшенный отступ сверху, чтобы поднять текст */
         }
 
         .navbar {
@@ -34,23 +43,33 @@
             display: flex;
             justify-content: center;
             padding: 10px 0;
-            background-color: rgba(255, 255, 255, 0); /* Полностью прозрачный фон */
-            position: fixed; /* Фиксированное положение */
-            top: 0; /* Прикрепление к верху */
-            z-index: 1000; /* Чтобы навигация была поверх контента */
+            background-color: rgba(255, 255, 255, 0);
+            /* Полностью прозрачный фон */
+            position: fixed;
+            /* Фиксированное положение */
+            top: 0;
+            /* Прикрепление к верху */
+            z-index: 1000;
+            /* Чтобы навигация была поверх контента */
         }
 
         .navbar a {
             text-decoration: none;
-            color: #888; /* Серый цвет текста */
-            font-size: 18px; /* Увеличенный размер шрифта */
-            margin: 0 40px; /* Увеличенное расстояние между кнопками */
-            font-family: 'Montserrat', sans-serif; /* Шрифт Montserrat для кнопок */
-            font-weight: 500; /* Полужирный вес шрифта */
+            color: #888;
+            /* Серый цвет текста */
+            font-size: 18px;
+            /* Увеличенный размер шрифта */
+            margin: 0 40px;
+            /* Увеличенное расстояние между кнопками */
+            font-family: 'Montserrat', sans-serif;
+            /* Шрифт Montserrat для кнопок */
+            font-weight: 500;
+            /* Полужирный вес шрифта */
         }
 
         .navbar a:hover {
-            color: #007bff; /* Голубой цвет при наведении */
+            color: #007bff;
+            /* Голубой цвет при наведении */
         }
 
         .content {
@@ -58,27 +77,36 @@
         }
 
         .content h1 {
-            font-size: 62px; /* Увеличенный размер шрифта на 30% */
+            font-size: 62px;
+            /* Увеличенный размер шрифта на 30% */
             margin: 0;
-            font-family: 'Playfair Display', serif; /* Шрифт Playfair Display для заголовка */
-            font-weight: 700; /* Полужирный вес шрифта */
-            line-height: 1.2; /* Уменьшенное межстрочное расстояние */
+            font-family: 'Playfair Display', serif;
+            /* Шрифт Playfair Display для заголовка */
+            font-weight: 700;
+            /* Полужирный вес шрифта */
+            line-height: 1.2;
+            /* Уменьшенное межстрочное расстояние */
         }
 
         .content h1 span {
-            display: block; /* Разделение строк */
+            display: block;
+            /* Разделение строк */
         }
 
         .content p {
-            font-size: 26px; /* Увеличенный размер шрифта на 30% */
+            font-size: 26px;
+            /* Увеличенный размер шрифта на 30% */
             margin: 20px 0;
             color: #666;
-            font-family: 'Montserrat', sans-serif; /* Шрифт Montserrat для подзаголовка */
-            line-height: 1.4; /* Уменьшенное межстрочное расстояние */
+            font-family: 'Montserrat', sans-serif;
+            /* Шрифт Montserrat для подзаголовка */
+            line-height: 1.4;
+            /* Уменьшенное межстрочное расстояние */
         }
 
         .content p span {
-            display: block; /* Разделение строк */
+            display: block;
+            /* Разделение строк */
         }
 
         .oval-button {
@@ -90,9 +118,12 @@
             border-radius: 30px;
             font-size: 18px;
             transition: background-color 0.3s ease;
-            font-family: 'Montserrat', sans-serif; /* Шрифт Montserrat для кнопки */
-            font-weight: 600; /* Более жирный вес шрифта */
-            text-transform: lowercase; /* Первая буква строчной */
+            font-family: 'Montserrat', sans-serif;
+            /* Шрифт Montserrat для кнопки */
+            font-weight: 600;
+            /* Более жирный вес шрифта */
+            text-transform: lowercase;
+            /* Первая буква строчной */
         }
 
         .oval-button:hover {
@@ -117,13 +148,33 @@
 
         .logo {
             position: fixed;
-            top: 30px; /* Немного опустим логотип */
+            top: 30px;
+            /* Немного опустим логотип */
             left: 20px;
-            width: 180px; /* Увеличим размер логотипа */
-            z-index: 1001; /* Чтобы логотип был поверх навигации */
+            width: 180px;
+            /* Увеличим размер логотипа */
+            z-index: 1001;
+            /* Чтобы логотип был поверх навигации */
+        }
+
+        /* Скрываем изначально всплывающее окно */
+        #popup-container {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /* Центруем контейнер точно посередине */
+            width: 500px;
+            height: 150px;
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
     </style>
 </head>
+
 <body>
     <!-- Логотип в левом верхнем углу -->
     <img src="logo.png" alt="Логотип" class="logo">
@@ -144,10 +195,22 @@
                 <span>Удобное приложение для быстрого</span>
                 <span>составления текстовых документов</span>
             </p>
-            <button class="oval-button" onclick="location.href='html.html'" aria-label="создать шаблон">создать шаблон</button>
+            <button class="oval-button" onclick="showPopup()" aria-label="создать шаблон">создать шаблон</button>
+            <div id="popup-container">
+                <!-- Всплывающее окно -->
+                <h2>Выберите страницу:</h2>
+                <button class="oval-button" onclick="location.href='html.html'" aria-label="Шаблон 1">Шаблон 1</button></a>
+                <button class="oval-button" onclick="location.href='employee-edit.html'" aria-label="Редактировать сотрудников">Редактировать сотрудников</button></a>
+            </div>
         </div>
     </div>
-
+    <script>
+        // Функция для отображения всплывающего окна
+        function showPopup() {
+            document.getElementById("popup-container").style.display = "block";
+        }
+    </script>
+    <!-- 
     <div id="notification" class="notification">Уведомление!</div>
 
     <script>
@@ -162,19 +225,7 @@
 
         // Пример вызова функции при загрузке страницы
         window.onload = showNotification;
-    </script>
+    </script> -->
 </body>
+
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-

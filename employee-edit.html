@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Редактирование сотрудника</title>
+    <!-- Подключение шрифтов из Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'Montserrat', sans-serif; /* Шрифт Montserrat для всего текста */
+            color: #333;
+            background: url('Рисунок1.jpg') no-repeat center center fixed; /* Использование изображения в качестве фона */
+            background-size: cover; /* Масштабирование фона */
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .oval-button {
+            padding: 15px 30px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            border-radius: 30px;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+            font-family: 'Montserrat', sans-serif; /* Шрифт Montserrat для кнопки */
+            font-weight: 600; /* Более жирный вес шрифта */
+            text-transform: lowercase; /* Первая буква строчной */
+            margin-top: 20px; /* Отступ сверху */
+        }
+
+        .oval-button:hover {
+            background-color: #0056b3;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        p {
+            font-size: 20px;
+            margin: 10px 0;
+            color: #666;
+            text-align: left;
+        }
+
+        .content-container {
+            width: 100%;
+            max-width: 800px;
+            margin-top: 20px;
+            margin-bottom: 40px; /* Отступ снизу */
+            background-color: rgba(255, 255, 255, 0.8); /* Полупрозрачный фон */
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .instruction-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            counter-reset: instruction-counter; /* Сброс счетчика */
+        }
+
+        .instruction-item {
+            margin-bottom: 12px;
+            padding-left: 30px;
+            position: relative;
+            font-size: 20px; /* Уменьшенный размер шрифта */
+            line-height: 1.4; /* Уменьшенное межстрочное расстояние */
+        }
+
+        .instruction-item:before {
+            counter-increment: instruction-counter; /* Увеличение счетчика */
+            content: counter(instruction-counter) "."; /* Отображение номера */
+            position: absolute;
+            left: 0;
+            color: #007bff;
+            font-weight: 600; /* Более жирный вес шрифта */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content-container">
+            <h1>Редактирование сотрудника</h1>
+            <ul class="instruction-list">
+                <li class="instruction-item">должность блеблебле блаблабла</li>
+                <li class="instruction-item">сотрудник по фио блеблебле блаблабла</li>
+                <li class="instruction-item">измените блеблебле блаблабла</li>
+                <li class="instruction-item">сохранить блеблебле блаблабла</li>
+            </ul>
+        </div>
+
+        <button class="oval-button" onclick="location.href='main.html'">вернуться на главную</button>
+    </div>
+</body>
+</html>
+
